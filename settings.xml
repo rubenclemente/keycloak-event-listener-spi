@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!--
+    <localRepository>C:\devel\tools\apache-maven-3.8.1\repository</localRepository>
+    -->
+    <localRepository>C:\devel\tools\apache-maven-repository</localRepository>
+
+    <pluginGroups>
+    </pluginGroups>
+    <servers>
+    </servers>
+    <mirrors>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>nonexus</id>
+            <repositories>
+                <!--
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven3/</url>
+                    <layout>default</layout>
+
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+                -->
+                <repository>
+                    <id>mvn-central-public</id>
+                    <name>mvn-central-public</name>
+                    <url>https://mvnrepository.com/content/groups/public/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>atlassian-public</id>
+                    <name>atlassian-public</name>
+                    <url>https://maven.atlassian.com/content/groups/public/</url>
+                    <layout>default</layout>
+                </repository>
+                <repository>
+                    <id>jboss-releases</id>
+                    <name>JBoss Releases</name>
+                    <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+                    <layout>default</layout>
+                </repository>
+
+            </repositories>
+
+        </profile>
+
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>nonexus</activeProfile>
+    </activeProfiles>
+</settings>
